@@ -1,0 +1,567 @@
+.mp-container {
+    background-color: #f1f5fb;
+    min-height: 100vh;
+    margin: -20px;
+    /* Counteract padding from sidebar layout */
+    color: #1e293b;
+}
+
+/* HEADER */
+.mp-header {
+    background-color: #2b498f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 60px;
+}
+
+.mp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    height: 100%;
+}
+
+.mp-logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mp-tabs {
+    display: flex;
+    height: 100%;
+}
+
+.mp-tab {
+    padding: 0 1.25rem;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #93a8d4;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.mp-tab:hover {
+    color: white;
+}
+
+.mp-tab.active {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.mp-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.mp-profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* CONTENT CONTAINER */
+.mp-content {
+    padding: 2.5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mp-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+}
+
+.mp-subtitle {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* FILTERS */
+.mp-filter-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.mp-filter-select {
+    padding: 0.55rem 2.5rem 0.55rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #475569;
+    background-color: white;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    font-weight: 500;
+}
+
+.mp-filter-input {
+    flex: 1;
+    padding: 0.55rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.mp-btn-search {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.mp-btn-search:hover {
+    opacity: 0.9;
+}
+
+/* JOB & CANDIDATE CARDS */
+.mp-card {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.mp-match-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.mp-match-badge.high {
+    background-color: #65a34e;
+}
+
+.mp-match-badge.med {
+    background-color: #d1a535;
+}
+
+.mp-job-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mp-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mp-job-role {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.35rem 0;
+}
+
+.mp-meta-line {
+    color: #64748b;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.25rem;
+}
+
+.mp-desc {
+    color: #334155;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* FOOTER (Job Matches) */
+.mp-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.25rem;
+}
+
+.mp-cand-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.mp-mini-badge {
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.mp-mini-badge.med {
+    background-color: #d1a535;
+}
+
+.mp-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mp-bar-label {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.mp-progress-track {
+    width: 120px;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.mp-progress-fill {
+    height: 100%;
+}
+
+.mp-progress-fill.high {
+    background-color: #65a34e;
+}
+
+.mp-progress-fill.med {
+    background-color: #d1a535;
+}
+
+.mp-progress-fill.low {
+    background-color: #f59e0b;
+}
+
+.mp-btn-action {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.mp-btn-action:hover {
+    background-color: #f8fafc;
+}
+
+.mp-btn-action.primary {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+}
+
+.mp-btn-action.primary:hover {
+    background-color: #2b498f;
+}
+
+/* TAGS (Candidates List) */
+.mp-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.mp-tag {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* ────────────────────────────────────
+   DASHBOARD / RESUME ANALYSIS
+   ──────────────────────────────────── */
+
+.mp-dash-section-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1rem 0;
+}
+
+/* Resume upload box */
+.mp-upload-box {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mp-upload-icon {
+    width: 70px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.mp-upload-text {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.mp-btn-upload {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Results Area */
+.mp-results-card {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.25rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+/* Flex layout for Dashboard */
+.mp-dash-top {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mp-dash-bottom {
+    border-top: 1px solid #cbd5e1;
+    padding-top: 2rem;
+}
+
+.mp-result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.mp-result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Large match percentage */
+.mp-large-match {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mp-match-pct-text {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.mp-match-pct-text.med {
+    color: #d1a535;
+}
+
+.mp-match-pct-text.high {
+    color: #65a34e;
+}
+
+.mp-large-track {
+    width: 100%;
+    height: 12px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mp-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.mp-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mp-fit-square {
+    width: 10px;
+    height: 10px;
+    background-color: #d1a535;
+}
+
+/* Donut Chart area */
+.mp-dash-overview-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.mp-donut-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(#65a34e 0% 40%,
+            #3b5998 40% 75%,
+            #d1a535 75% 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mp-donut-hole {
+    width: 110px;
+    height: 110px;
+    background-color: #f1f5fb;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mp-donut-label {
+    font-size: 0.65rem;
+    color: #334155;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mp-donut-score {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 0.25rem;
+}
+
+.mp-mini-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.mp-mini-card {
+    background: white;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mp-mini-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mp-mini-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.mp-mini-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+.mp-mini-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mp-mini-badge-pct {
+    background-color: #fffbeb;
+    color: #d1a535;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.mp-mini-badge-pct.high {
+    background-color: #f0fdf4;
+    color: #65a34e;
+}
+
+.mp-mini-msg {
+    font-size: 0.75rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

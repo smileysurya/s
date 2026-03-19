@@ -1,0 +1,329 @@
+.b2b-container {
+  background-color: #f4f7fa;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: #333;
+}
+
+.b2b-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.b2b-header h1 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+.b2b-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.b2b-tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.b2b-tab-btn:hover {
+  color: #1e3a8a;
+}
+
+.b2b-tab-btn.active {
+  background-color: #1e40af;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.4);
+}
+
+.b2b-content {
+  margin-top: 2rem;
+}
+
+/* Common Card Style */
+.b2b-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.b2b-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.75rem;
+}
+
+/* Top Metric Cards */
+.b2b-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.metric-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.metric-blue {
+  background-color: #3b82f6;
+}
+
+/* Vendors / Gross Revenue */
+.metric-green {
+  background-color: #22c55e;
+}
+
+/* Active Orders / Net Profit */
+.metric-orange {
+  background-color: #f97316;
+}
+
+/* Pending RFQs / Total Expenses */
+.metric-purple {
+  background-color: #8b5cf6;
+}
+
+/* Monthly Revenue / Outstanding Balance */
+
+/* Dashboard Layout */
+.dashboard-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Forms */
+.b2b-form-group {
+  margin-bottom: 1rem;
+}
+
+.b2b-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.b2b-input:focus {
+  border-color: #1e40af;
+}
+
+.b2b-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.b2b-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.b2b-btn-primary {
+  background-color: #2563eb;
+}
+
+.b2b-btn-success {
+  background-color: #16a34a;
+}
+
+.b2b-btn:hover {
+  opacity: 0.9;
+}
+
+/* Tables */
+.b2b-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.b2b-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.b2b-table th,
+.b2b-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.b2b-table th {
+  font-weight: 600;
+  color: #475569;
+  background-color: #f8fafc;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.status-badge.open {
+  color: #16a34a;
+}
+
+.status-badge.received {
+  color: #475569;
+}
+
+.status-badge.pending {
+  color: #ea580c;
+}
+
+.status-badge.shipped {
+  color: #16a34a;
+}
+
+.status-badge.processing {
+  color: #ea580c;
+}
+
+.status-badge.completed {
+  color: #2563eb;
+}
+
+/* Finance Layout */
+.finance-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Lists and Vendor pages etc. */
+.table-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.action-btn {
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.btn-view {
+  background-color: #3b82f6;
+}
+
+.btn-edit {
+  background-color: #f59e0b;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.page-btn {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.page-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
